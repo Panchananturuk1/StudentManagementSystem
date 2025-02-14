@@ -1,0 +1,14 @@
+<p>student-form works!</p>
+
+<div class="container">
+    <h2>{{ isEditMode ? 'Edit' : 'Add' }} Student</h2>
+    <form (submit)="submitForm()">
+      <input type="text" [(ngModel)]="student.name" name="name" placeholder="Name" required>
+      <input type="number" [(ngModel)]="student.age" name="age" placeholder="Age" required>
+      <input type="email" [(ngModel)]="student.email" name="email" placeholder="Email" required>
+      <input type="text" [(ngModel)]="student.course" name="course" placeholder="Course" required>
+  
+      <button type="submit">{{ isEditMode ? 'Update' : 'Add' }} Student</button>
+    </form>
+  </div>
+  

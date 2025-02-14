@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Student List</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Email</th>
+          <th>Course</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{ student.name }}</td>
+          <td>{{ student.age }}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ student.course }}</td>
+          <td>
+            <button (click)="deleteStudent(student.id)">Delete</button>
+            <button [routerLink]="['/edit', student.id]">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button [routerLink]="['/add']">Add New Student</button>
+  </div>
+  
